@@ -14,7 +14,7 @@ class User(AbstractBaseUser):
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 
-class Property(models.Model):
+class Listing(models.Model):
     property_id = models.UUIDField(primary_key=True)
     host_id = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)

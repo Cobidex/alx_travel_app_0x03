@@ -1,8 +1,8 @@
 from rest_framework.routers import DefaultRouter
-from .views import PropertyViewSet, BookingViewSet
+from .views import ListingViewSet, BookingViewSet
 
 router = DefaultRouter()
-router.register(r'properties', PropertyViewSet, basename='listing')
+router.register(r'listings', ListingViewSet, basename='listing')
 router.register(r'bookings', BookingViewSet, basename='booking')
 
 urlpatterns = router.urls
